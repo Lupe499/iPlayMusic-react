@@ -3,7 +3,7 @@ import "./PlaylistSong.css";
 function PlaylistSong({songName, artistName, time}) {
   return (
     <div className="playlistSongWrapper">
-        <i class="fas fa-play"></i>
+        <i className="fas fa-play"></i>
         <div className="songText">
             <h3>{songName}</h3>
             <p>{artistName}</p>

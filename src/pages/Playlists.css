@@ -1,4 +1,4 @@
-.gallery img:first-child, img:last-child{
+.gallery img:first-child, .gallery img:last-child{
     transform: scale(0.75);
 }
 .gallery img:nth-child(2){

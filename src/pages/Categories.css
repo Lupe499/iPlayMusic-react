@@ -1,0 +1,18 @@
+.mic{
+    color: black;
+}
+
+.pulse{
+    color: #EE0979;
+}
+
+.categories_article{
+    margin: 25px;
+}
+.categoriesList{
+    margin-bottom: 5em;
+}
+
+.albumLink{
+    text-decoration: none;
+}

@@ -1,6 +1,5 @@
 import { Link } from '@reach/router';
 import BottomNav from '../components/BottomNav';
-import Card from '../components/FeatureCard';
 import PlaylistSong from '../components/PlaylistSong';
 import TopNav from '../components/TopNav';
 import "./Playlists.css";

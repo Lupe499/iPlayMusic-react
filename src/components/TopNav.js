@@ -5,7 +5,7 @@ function TopNav({pageName, pageH1}) {
     <>
         <nav className="TopNav">
             <ul className="TopUl">
-                <li><i class="fas fa-chevron-left"></i></li>
+                <li><i className="fas fa-chevron-left"></i></li>
                 <li className="pageName">{pageName}</li>
                 <li><ion-icon name="search-outline"></ion-icon></li>
             </ul>
