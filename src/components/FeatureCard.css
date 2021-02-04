@@ -4,6 +4,8 @@
 }
 .CardWrapper{
     display: grid;
+    margin-bottom: 2em;
+    text-decoration: none;
 }
 .CardWrapper img, div{
     grid-area: 1/1/2/2;

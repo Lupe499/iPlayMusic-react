@@ -6,17 +6,36 @@ import Playlists from './pages/Playlists';
 import SimplePlayer from './pages/SimplePlayer';
 import Categories from './pages/Categories';
 import Albums from './pages/Albums';
+import TokenContext from "./TokenContext";
+import { useState } from "react";
+import Callback from "./pages/Callback";
 
 function App() {
+  var tokenState = useState(null);
+
   return (
-    <Router>
-      <Login path="/" />
-      <Featured path="/featured" />
-      <Playlists path="/playlists"/>
-      <SimplePlayer path="/simpleplayer" songName="Don’t Call Me Up" artistName="Mabel" time="3:40"/>
-      <Categories path="/categories"/>
-      <Albums path="/albums" />
-    </Router>
+    <TokenContext.Provider value={tokenState}>
+      <Router>
+        {
+          (function() {
+            if(tokenState[0]?.access_token)
+            return(
+              <>
+                <Featured path="/featured" />
+                <Playlists path="/playlists"/>
+                <Playlists path="/playlists/:id"/>
+                <SimplePlayer path="/simpleplayer"/>
+                <SimplePlayer path="/simpleplayer/:id"/>
+                <Categories path="/categories"/>
+                <Albums path="/albums" />
+              </>
+            )
+          }())
+        }
+        <Login default />
+        <Callback path="/callback" />
+      </Router>
+    </TokenContext.Provider>
   );
 }
 

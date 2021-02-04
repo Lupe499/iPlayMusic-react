@@ -1,3 +1,6 @@
+.gallery img{
+    max-width: 155px;
+}
 .gallery img:first-child, .gallery img:last-child{
     transform: scale(0.75);
 }

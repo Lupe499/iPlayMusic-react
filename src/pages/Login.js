@@ -1,11 +1,20 @@
 import { Link } from '@reach/router';
 import './Login.css';
+import querystring from "querystring";
 
 function Login() {
+  var queryParameters = querystring.stringify({
+		response_type: "code",
+		client_id: "dd0fbfb853134263b6c53599d371925b",
+		scope: "user-read-private user-read-email",
+		redirect_uri: "http://localhost:8888/callback",
+		state: "vdjldfglfdlgrpoiaer9garlogihlgkzhdrlgishlro8tubzpdortuzorihglzdoighlzoirhtlzo8ghldhglzdghlzdoigh"
+  });
+  
   return (
     <div className="loginPage">
       <h1 className="Login">Log In</h1>
-
+        <a href={`https://accounts.spotify.com/authorize?${queryParameters}`}>Spotify Log in</a>
       <form className="loginForm">
           <label htmlFor="username">Username</label>
           <div className="usernameDiv">

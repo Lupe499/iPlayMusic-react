@@ -1,14 +1,15 @@
+import { Link } from "@reach/router";
 import "./FeatureCard.css";
 
-function Card({image, text}) {
+function Card({image, text, id}) {
   return (
-    <div className="CardWrapper">
+    <Link to={"playlists/" + id} className="CardWrapper">
         <img className="CardImage" src={image} alt=""/>
         <div>
             <h2>{text}</h2>
             <p>Soundtrack</p>
         </div>
-    </div>
+    </Link>
   );
 }
 
