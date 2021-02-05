@@ -37,7 +37,7 @@ function Playlists(props) {
             <div className="gallery">
                 {playlists && playlists.items.map(function(result) {
                     return (
-                        <Link to={result.id}><img src={result.images[1].url} alt=""/></Link>
+                        <Link to={"/playlists/" + result.id}><img src={result.images[1].url} alt=""/></Link>
                     )
                 })}
             </div>
@@ -47,7 +47,7 @@ function Playlists(props) {
                 {playlist.items && playlist.items.map(function(result) {
                     console.log(result);
                     return (
-                        <PlaylistSong time={msToMinutesAndSeconds(result.track?.duration_ms)} songName={result.track.name} artistName={result.track.artists[0].name} id={result.track.id} />
+                        <PlaylistSong time={msToMinutesAndSeconds(result.track?.duration_ms)} songName={result.track.name} artistName={result.track.artists[0].name} id={result.track.id} key={result.track.id} />
                     )
                 })}
 

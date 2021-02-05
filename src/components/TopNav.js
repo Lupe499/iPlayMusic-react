@@ -5,7 +5,7 @@ function TopNav({pageName, pageH1}) {
     <>
         <nav className="TopNav">
             <ul className="TopUl">
-                <li><button onClick={() => window.history.back()}><i className="fas fa-chevron-left"></i></button></li>
+                <li><button className="backButton" onClick={() => window.history.back()}><i className="fas fa-chevron-left"></i></button></li>
                 <li className="pageName">{pageName}</li>
                 <li><ion-icon name="search-outline"></ion-icon></li>
             </ul>

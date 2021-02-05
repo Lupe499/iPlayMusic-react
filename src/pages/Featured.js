@@ -19,12 +19,10 @@ export default function Featured() {
 		})
 		.then(response => setContent(response.data));
 	}, [token, setContent]);
-  //console.log(content.playlists.items);
   return(
     <div className="FeaturedPage">
         <TopNav pageName="Featured" pageH1="Featured"/>
         {content.playlists && content.playlists.items.map(function(result) {
-          console.log(result);
           return (
             <Card text={result.name} image={result.images[0].url} id={result.id} key={result.id}/>
           )

@@ -19,6 +19,25 @@ function SimplePlayer(props) {
 	}, [token, settrack]);
     console.log(track);
 
+    function playSong() {
+        var audio = document.querySelector("audio");
+        var play = document.querySelector(".play");
+        audio.volume=0.1
+        if(!audio.src) {
+            alert("No Working");
+        }
+        
+        if (audio.paused && audio.src) {
+            audio.play();
+            play.className="fas fa-pause play";
+        } else{
+            audio.pause();
+            play.className="fas fa-play play";
+        }
+        
+
+    } 
+
   return (
     <div className="SimplePlayerWrapper">
         <TopNav pageName="Playing"/>
@@ -33,6 +52,7 @@ function SimplePlayer(props) {
                 <input className="timeRange" type="range"/>
                 <div className="timeDiv">
                     <p>0:00</p>
+                    <audio src={track.preview_url}></audio>
                     <p>{msToMinutesAndSeconds(track.duration_ms)}</p>
                 </div>
             </div>
@@ -41,7 +61,7 @@ function SimplePlayer(props) {
             <ul className="playerUl">
                 <li><i className="fas fa-step-backward"></i></li>
                 <li><i className="fas fa-backward"></i></li>
-                <li><i className="fas fa-play play"></i></li>
+                <li><button onClick={playSong} className="play"></button></li>
                 <li><i className="fas fa-forward"></i></li>
                 <li><i className="fas fa-step-forward"></i></li>
             </ul>

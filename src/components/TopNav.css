@@ -25,3 +25,7 @@
 .TopNav{
     margin-bottom: 30px;
 }
+.backButton{
+    border: none;
+    background-color: white;
+}
