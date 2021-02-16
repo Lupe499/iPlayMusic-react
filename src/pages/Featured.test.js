@@ -54,8 +54,7 @@ describe("Featured Page", function () {
 		});
 
 		await waitFor(function () {
-			var text = screen.getByText(/akfahfkasdasjh/i);
-			
+			var text = screen.getByText(/asdsadasda/i);
 			expect(text).toBeInTheDocument();
 		});
 	});
