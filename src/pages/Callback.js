@@ -8,15 +8,22 @@ export default function Callback(props) {
 
 	var code = new URLSearchParams(props.location.search).get("code");
 
-	useEffect(function() {
-		axios.post("/.netlify/functions/token", JSON.stringify({
-			code
-		}))
-		.then(response => {
-			setToken(response.data);
-			navigate("/featured");
-		});
-	}, [setToken, code]);
+	useEffect(
+		function () {
+			axios
+				.post(
+					"/.netlify/functions/token",
+					JSON.stringify({
+						code,
+					})
+				)
+				.then(response => {
+					setToken(response.data);
+					navigate("/featured");
+				});
+		},
+		[setToken, code]
+	);
 
 	return null;
 }
