@@ -54,7 +54,7 @@ describe("Featured Page", function () {
 		});
 
 		await waitFor(function () {
-			var text = screen.getByText(/asdsadasda/i);
+			var text = screen.getByText(/brain food/i);
 			expect(text).toBeInTheDocument();
 		});
 	});

@@ -31,5 +31,6 @@ export default function Featured() {
 				})}
 			<BottomNav />
 		</div>
+		
 	);
 }
