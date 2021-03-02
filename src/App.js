@@ -10,7 +10,6 @@ import TokenContext from "./TokenContext";
 import { useState } from "react";
 import Callback from "./pages/Callback";
 
-
 function App() {
 	var tokenState = useState(null);
 
