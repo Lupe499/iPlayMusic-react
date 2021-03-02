@@ -55,13 +55,13 @@ function Playlists(props) {
 					playlist.items.map(function (result) {
 						console.log(result);
 						return (
-							<PlaylistSong
-								time={msToMinutesAndSeconds(result.track?.duration_ms)}
-								songName={result.track.name}
-								artistName={result.track.artists[0].name}
-								id={result.track.id}
-								key={result.track.id}
-							/>
+								<PlaylistSong
+									time={msToMinutesAndSeconds(result.track?.duration_ms)}
+									songName={result.track.name}
+									artistName={result.track.artists[0].name}
+									id={result.track.id}
+									key={result.track.id}
+									/>
 						);
 					})}
 

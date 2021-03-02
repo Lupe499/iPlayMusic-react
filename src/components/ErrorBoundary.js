@@ -1,5 +1,6 @@
 import { Link, Redirect } from "@reach/router";
 import { Component } from "react";
+import { axios } from "axios";
 
 class ErrorBoundary extends Component {
 	constructor(props) {

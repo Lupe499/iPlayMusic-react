@@ -2,6 +2,7 @@ import { Link } from "@reach/router";
 import "./PlaylistSong.css";
 
 function PlaylistSong({ songName, artistName, time, id }) {
+	//throw Error("pfffffff hahahaha")
 	return (
 		<Link to={"/simpleplayer/" + id} className="playlistSongWrapper">
 			<i className="fas fa-play"></i>

@@ -9,7 +9,7 @@ import Albums from "./pages/Albums";
 import TokenContext from "./TokenContext";
 import { useState } from "react";
 import Callback from "./pages/Callback";
-import ErrorBoundary from "./components/ErrorBoundary";
+
 
 function App() {
 	var tokenState = useState(null);
