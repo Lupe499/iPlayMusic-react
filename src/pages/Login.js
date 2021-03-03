@@ -2,12 +2,13 @@ import { Link } from "@reach/router";
 import "./Login.css";
 import querystring from "querystring";
 
+console.log(window.location.href);
 function Login() {
 	var queryParameters = querystring.stringify({
 		response_type: "code",
 		client_id: "dd0fbfb853134263b6c53599d371925b",
 		scope: "user-read-private user-read-email",
-		redirect_uri: "http://localhost:8888/callback",
+		redirect_uri: `${window.location.href}callback`,
 		state: "vdjldfglfdlgrpoiaer9garlogihlgkzhdrlgishlro8tubzpdortuzorihglzdoighlzoirhtlzo8ghldhglzdghlzdoigh",
 	});
 	return (
