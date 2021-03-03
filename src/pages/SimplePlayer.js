@@ -11,14 +11,14 @@ function SimplePlayer(props) {
 	useEffect(
 		function () {
 			axios
-				.get(`https://api.spotify.com/v1/tracks/`, {
+				.get(`https://api.spotify.com/v1/tracks/${props.id}`, {
 					headers: {
 						Authorization: "Bearer " + token.access_token,
 					},
 				})
 				.then(response => settrack(response.data));
 		},
-		[token, settrack]
+		[token, settrack, props.id]
 	);
 	console.log(track);
 
