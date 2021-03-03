@@ -11,7 +11,7 @@ function SimplePlayer(props) {
 	useEffect(
 		function () {
 			axios
-				.get(`https://api.spotify.com/v1/tracks/${props.id}`, {
+				.get(`https://api.spotify.com/v1/tracks/`, {
 					headers: {
 						Authorization: "Bearer " + token.access_token,
 					},
