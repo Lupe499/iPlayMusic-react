@@ -3,15 +3,13 @@ import "./Login.css";
 import querystring from "querystring";
 
 function Login() {
-
 	var uri;
 
 	if (process.env.NODE_ENV === "production") {
 		uri = "https://iplay-music-lucas.netlify.app/callback";
-	}else {
+	} else {
 		uri = "http://loaclhost:8888/callback";
 	}
-
 
 	var options = querystring.stringify({
 		response_type: "code",
