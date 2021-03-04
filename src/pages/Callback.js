@@ -8,6 +8,7 @@ export default function Callback(props) {
 	var setToken = tokenState[1];
 
 	var code = new URLSearchParams(props.location.search).get("code");
+	var state = new URLSearchParams(props.location.search).get("state");
 
 	useEffect(
 		function () {
@@ -16,6 +17,7 @@ export default function Callback(props) {
 					"/.netlify/functions/token",
 					JSON.stringify({
 						code,
+						state,
 					})
 				)
 				.then(response => {
@@ -23,7 +25,7 @@ export default function Callback(props) {
 					navigate("/featured");
 				});
 		},
-		[setToken, code]
+		[setToken, code, state]
 	);
 
 	return null;
