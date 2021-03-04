@@ -1,10 +1,10 @@
-.FeaturedPage{
-    font-family: 'Poppins', sans-serif;
-    max-width: 375px;
-    margin: 0 auto 100px ;
-    padding: 20px 27px 0 27px;
+.FeaturedPage {
+	font-family: "Poppins", sans-serif;
+	max-width: 375px;
+	margin: 0 auto 100px;
+	padding: 20px 27px 0 27px;
 }
-.FeaturedPage img{
-    width: 100%;
-    height: auto;
+.FeaturedPage img {
+	width: 100%;
+	height: auto;
 }

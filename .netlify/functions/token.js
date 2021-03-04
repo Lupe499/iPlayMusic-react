@@ -1,7 +1,7 @@
 const { default: axios } = require("axios");
 
-exports.handler = async function(event, context) {
-	if(event.httpMethod !== "POST") return { statusCode: 405, body: "" }
+exports.handler = async function (event, context) {
+	if (event.httpMethod !== "POST") return { statusCode: 405, body: "" };
 
 	var body = JSON.parse(event.body);
 
@@ -11,27 +11,26 @@ exports.handler = async function(event, context) {
 		params: {
 			code: body.code,
 			redirect_uri: process.env.REDIRECT_URI,
-			grant_type: "authorization_code"
+			grant_type: "authorization_code",
 		},
 		headers: {
-			"Authorization": "Basic " + (Buffer.from(process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET).toString("base64"))
+			Authorization: "Basic " + Buffer.from(process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET).toString("base64"),
 		},
-		json: true
-	}
+		json: true,
+	};
 
 	try {
 		var response = await axios(authOptions);
-		
+
 		return {
 			statusCode: 201,
-			body: JSON.stringify(response.data)
-		}
+			body: JSON.stringify(response.data),
+		};
 	} catch (error) {
 		console.log(error);
 		return {
 			statusCode: 500,
-			body: "internal server error"
-		}
+			body: "internal server error",
+		};
 	}
-
-}
+};

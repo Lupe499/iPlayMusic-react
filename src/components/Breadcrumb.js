@@ -1,9 +1,7 @@
 import "./Bredcrumb.css";
 
 function Bredcrumb() {
-  return (
-    null
-  );
+	return null;
 }
 
 export default Bredcrumb;

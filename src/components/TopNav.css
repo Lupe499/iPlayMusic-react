@@ -1,31 +1,31 @@
-.TopUl{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+.TopUl {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
 }
-.TopUl li{
-    font-size: 18px;
+.TopUl li {
+	font-size: 18px;
 }
-.TopUl .pageName{
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 2px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 300;
+.TopUl .pageName {
+	font-family: "Poppins", sans-serif;
+	letter-spacing: 2px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 300;
 }
-.pageTitle{
-    color: rgb(238,9,121);
-    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline;
-    font-family: 'Poppins', sans-serif;
+.pageTitle {
+	color: rgb(238, 9, 121);
+	background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline;
+	font-family: "Poppins", sans-serif;
 }
-.TopNav{
-    margin-bottom: 30px;
+.TopNav {
+	margin-bottom: 30px;
 }
-.backButton{
-    border: none;
-    background-color: white;
+.backButton {
+	border: none;
+	background-color: white;
 }

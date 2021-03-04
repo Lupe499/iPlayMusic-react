@@ -1,86 +1,90 @@
-.loginPage{
-    font-family: 'Poppins', sans-serif;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 27px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 200px 1fr;
+.loginPage {
+	font-family: "Poppins", sans-serif;
+	max-width: 375px;
+	margin: 0 auto;
+	padding: 0 27px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 200px 1fr;
 }
-.Login{
-    grid-area: 1/1/2/5;
-    margin: 0.8em 0 0 0;
-    color: #341931;
+.Login {
+	grid-area: 1/1/2/5;
+	margin: 0.8em 0 0 0;
+	color: #341931;
 }
-#username, #password{
-    border: none;
-    background-color: white;
-    border-bottom: 3px solid #341931;
-    padding-bottom: 0.5em;
-    width: 320px;
+#username,
+#password {
+	border: none;
+	background-color: white;
+	border-bottom: 3px solid #341931;
+	padding-bottom: 0.5em;
+	width: 320px;
 }
-#username::placeholder, #password::placeholder{
-    color: #341931;
-    font-size: 15px;
+#username::placeholder,
+#password::placeholder {
+	color: #341931;
+	font-size: 15px;
 }
-.fa-user, ion-icon[name="key"]{
-    position: absolute;
-    right: 20px;
-    top: 2px;
+.fa-user,
+ion-icon[name="key"] {
+	position: absolute;
+	right: 20px;
+	top: 2px;
 }
-ion-icon[name="key"]{
-    font-size: 20px;
-    transform: rotate(90deg);
-    color: #341931;
+ion-icon[name="key"] {
+	font-size: 20px;
+	transform: rotate(90deg);
+	color: #341931;
 }
 
-.loginForm{
-    grid-area: 2/1/3/5;
+.loginForm {
+	grid-area: 2/1/3/5;
 }
-.loginForm label{
-    font-weight: 600;
-    font-size: 15px;
+.loginForm label {
+	font-weight: 600;
+	font-size: 15px;
 }
-.usernameDiv{
-    margin-bottom: 1em;
+.usernameDiv {
+	margin-bottom: 1em;
 }
-.passwordDiv, .usernameDiv{
-    margin-top: 1em;
-    position: relative;
+.passwordDiv,
+.usernameDiv {
+	margin-top: 1em;
+	position: relative;
 }
-.loginButtonsDiv{
-    display: grid;
-    margin-top: 2em;
+.loginButtonsDiv {
+	display: grid;
+	margin-top: 2em;
 }
-.loginButton{
-    border: solid 3px #341931;
-    border-radius: 50px;
-    background-color: white;
-    width: 323px;
-    padding: 1em 0;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: #341931;
-    text-align: center;
+.loginButton {
+	border: solid 3px #341931;
+	border-radius: 50px;
+	background-color: white;
+	width: 323px;
+	padding: 1em 0;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-decoration: none;
+	color: #341931;
+	text-align: center;
 }
-.fingerprint{
-    border: none;
-    background-color: #FF1168;
-    color: white;
-    font-size: 34px;
-    width: 75px;
-    padding: 0.5em;
-    border-radius: 50%;
-    margin-top: 2em;
-    justify-self: center;
-    margin-right: 20px;
+.fingerprint {
+	border: none;
+	background-color: #ff1168;
+	color: white;
+	font-size: 34px;
+	width: 75px;
+	padding: 0.5em;
+	border-radius: 50%;
+	margin-top: 2em;
+	justify-self: center;
+	margin-right: 20px;
 }
-.fingerprintText{
-    text-align: center;
-    font-size: 15px;
-    margin-top: 10px;
-    font-weight: 300;
-    margin-right: 20px;
+.fingerprintText {
+	text-align: center;
+	font-size: 15px;
+	margin-top: 10px;
+	font-weight: 300;
+	margin-right: 20px;
 }
